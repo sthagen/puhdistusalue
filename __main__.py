@@ -66,7 +66,8 @@ def triage_hashes(hash_map):
 def main(argv=None):
     """Process the files separately per folder."""
     argv = sys.argv[1:] if argv is None else argv
-    verbose = True if "-v" in argv or "--verbose" in argv else DEBUG
+    verbose = True if "-v" in argv or "--verbose" in argv
+    debug = DEBUG
     folder_paths = [entry for entry in argv if entry not in ("-v", "--verbose")]
     total_removed, total_less_bytes = 0, 0
     for a_path in folder_paths:
@@ -75,10 +76,10 @@ def main(argv=None):
         hash_map = read_folder(a_path)
         keep_these, remove_those = triage_hashes(hash_map)
         for this in keep_these:
-            verbose and print(f"KEEP file {this}")
+            debug and print(f"KEEP file {this}")
         folder_removed, folder_less_bytes = 0, 0
         for that in remove_those:
-            verbose and print(f"REMOVE file {that}")
+            debug and print(f"REMOVE file {that}")
             target = os.path.join(a_path, that)
             folder_less_bytes += os.path.getsize(target)
             os.remove(target)

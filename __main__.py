@@ -63,25 +63,24 @@ def triage_hashes(hash_map):
 
 
 def prefix_compression(paths):
-    """Return either common prefix string and rel paths string sequence or empty string and paths."""
+    """Return common prefix string and rel paths string sequence."""
     if not paths:  # Early out return empty prefix and empty sequence
         return '', paths
     prefix_guard, first, last = 0, min(paths), max(paths)
-    for pos, ch in enumerate(first):
-        if ch != last[pos]:
+    for pos, char in enumerate(first):
+        if char != last[pos]:
             prefix_guard = pos
             break
     if not prefix_guard:  # Reduce memory pressure for all different paths
         return '', paths
     return first[:prefix_guard], [a_path[prefix_guard:] for a_path in paths]
-            
-        
+
+
 # pylint: disable=expression-not-assigned
 def main(argv=None):
     """Process the files separately per folder."""
     argv = sys.argv[1:] if argv is None else argv
     verbose = True if "-v" in argv or "--verbose" in argv else False
-    debug = DEBUG
     folder_paths = [entry for entry in argv if entry not in ("-v", "--verbose")]
     total_removed, total_less_bytes = 0, 0
     for a_path in folder_paths:
@@ -90,10 +89,10 @@ def main(argv=None):
         hash_map = read_folder(a_path)
         keep_these, remove_those = triage_hashes(hash_map)
         for this in keep_these:
-            debug and print(f"KEEP file {this}")
+            DEBUG and print(f"KEEP file {this}")
         folder_removed, folder_less_bytes = 0, 0
         for that in remove_those:
-            debug and print(f"REMOVE file {that}")
+            DEBUG and print(f"REMOVE file {that}")
             target = os.path.join(a_path, that)
             folder_less_bytes += os.path.getsize(target)
             os.remove(target)

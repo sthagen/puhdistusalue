@@ -68,7 +68,7 @@ def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     verbose = True if "-v" in argv or "--verbose" in argv else DEBUG
     folder_paths = [entry for entry in argv if entry not in ("-v", "--verbose")]
-    folder_removed, total_removed = 0, 0
+    total_removed = 0
     for a_path in folder_paths:
         if a_path in ("-v", "--verbose"):
             continue
@@ -76,6 +76,7 @@ def main(argv=None):
         keep_these, remove_those = triage_hashes(hash_map)
         for this in keep_these:
             verbose and print(f"KEEP file {this}")
+        folder_removed = 0
         for that in remove_those:
             verbose and print(f"REMOVE file {that}")
             os.remove(os.path.join(a_path, that))
@@ -84,8 +85,12 @@ def main(argv=None):
         print(f"removed {folder_removed} redundant objects from folder at {a_path}")
         total_removed += folder_removed
 
+    if len(folder_paths) > 5:
+        folders_disp = f"{folder_paths[:3]}, ... {folder_paths[-1]}"
+    else:
+        folders_disp = f"{folder_paths}"
     print(
-        f"removed {total_removed} total redundant objects from folders at {folder_paths}"
+        f"removed {total_removed} total redundant objects from folders at {folder_disp}"
     )
 
 

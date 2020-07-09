@@ -90,7 +90,7 @@ def main(argv=None):
     else:
         folders_disp = f"{folder_paths}"
     print(
-        f"removed {total_removed} total redundant objects from folders at {folder_disp}"
+        f"removed {total_removed} total redundant objects from folders at {folders_disp}"
     )
 
 

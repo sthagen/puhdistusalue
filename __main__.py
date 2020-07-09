@@ -68,7 +68,7 @@ def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     verbose = True if "-v" in argv or "--verbose" in argv else DEBUG
     folder_paths = [entry for entry in argv if entry not in ("-v", "--verbose")]
-    total_removed = 0
+    total_removed, total_less_bytes = 0, 0
     for a_path in folder_paths:
         if a_path in ("-v", "--verbose"):
             continue
@@ -76,13 +76,16 @@ def main(argv=None):
         keep_these, remove_those = triage_hashes(hash_map)
         for this in keep_these:
             verbose and print(f"KEEP file {this}")
-        folder_removed = 0
+        folder_removed, folder_less_bytes = 0, 0
         for that in remove_those:
             verbose and print(f"REMOVE file {that}")
-            os.remove(os.path.join(a_path, that))
+            target = os.path.join(a_path, that)
+            folder_less_bytes += os.path.getsize(target)
+            os.remove(target)
             folder_removed += 1
 
-        print(f"removed {folder_removed} redundant objects from folder at {a_path}")
+        verbose and print(f"removed {folder_removed} redundant objects or {folder_less_bytes} combined bytes from folder at {a_path}")
+        total_less_bytes += folder_less_bytes
         total_removed += folder_removed
 
     if len(folder_paths) > 5:
@@ -90,7 +93,7 @@ def main(argv=None):
     else:
         folders_disp = f"{folder_paths}"
     print(
-        f"removed {total_removed} total redundant objects from folders at {folders_disp}"
+        f"removed {total_removed} total redundant objects or {total_less_bytes} total bytes from folders at {folders_disp}"
     )
 
 

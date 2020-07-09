@@ -86,7 +86,7 @@ def main(argv=None):
         total_removed += folder_removed
 
     if len(folder_paths) > 5:
-        folders_disp = f"{folder_paths[:3]}, ... {folder_paths[-1]}"
+        folders_disp = f"[{', '.join(folder_paths[:3])}, ... {folder_paths[-1]}]"
     else:
         folders_disp = f"{folder_paths}"
     print(

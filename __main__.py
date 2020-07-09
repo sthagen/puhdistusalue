@@ -66,7 +66,7 @@ def triage_hashes(hash_map):
 def main(argv=None):
     """Process the files separately per folder."""
     argv = sys.argv[1:] if argv is None else argv
-    verbose = True if "-v" in argv or "--verbose" in argv
+    verbose = True if "-v" in argv or "--verbose" in argv else False
     debug = DEBUG
     folder_paths = [entry for entry in argv if entry not in ("-v", "--verbose")]
     total_removed, total_less_bytes = 0, 0

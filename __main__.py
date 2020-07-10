@@ -62,18 +62,23 @@ def triage_hashes(hash_map):
     return keep, remove
 
 
-def prefix_compression(paths):
-    """Return common prefix string and rel paths string sequence."""
-    if not paths:  # Early out return empty prefix and empty sequence
-        return '', paths
-    prefix_guard, first, last = 0, min(paths), max(paths)
+def prefix_compression(texts, policy=None):
+    """Return common prefix string abiding policy and compressed texts string list."""
+    if not texts:  # Early out return empty prefix and empty sequence
+        return "", texts
+    prefix_guard, first, last = 0, min(texts), max(texts)
     for pos, char in enumerate(first):
         if char != last[pos]:
             prefix_guard = pos
-            break
-    if not prefix_guard:  # Reduce memory pressure for all different paths
-        return '', paths
-    return first[:prefix_guard], [a_path[prefix_guard:] for a_path in paths]
+            if not policy:
+                break
+            for here in range(prefix_guard, -1, -1):
+                if policy(first[here]):
+                    prefix_guard = here + 1
+                    break
+    if not prefix_guard:  # Reduce memory pressure for all different texts
+        return "", texts
+    return first[:prefix_guard], [text[prefix_guard:] for text in texts]
 
 
 # pylint: disable=expression-not-assigned
@@ -102,7 +107,7 @@ def main(argv=None):
         total_less_bytes += folder_less_bytes
         total_removed += folder_removed
 
-    prefix, rel_paths = prefix_compression(folder_paths)
+    prefix, rel_paths = prefix_compression(folder_paths, policy=lambda x: x == '/')
     if len(rel_paths) > 5:
         folders_disp = f"{prefix}[{', '.join(rel_paths[:3])}, ... {rel_paths[-1]}]"
     else:

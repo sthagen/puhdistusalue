@@ -70,12 +70,12 @@ def prefix_compression(texts, policy=None):
     for pos, char in enumerate(first):
         if char != last[pos]:
             prefix_guard = pos
-            if not policy:
+            break
+    if policy:
+        for here in range(prefix_guard, -1, -1):
+            if policy(first[here]):
+                prefix_guard = here + 1
                 break
-            for here in range(prefix_guard, -1, -1):
-                if policy(first[here]):
-                    prefix_guard = here + 1
-                    break
     if not prefix_guard:  # Reduce memory pressure for all different texts
         return "", texts
     return first[:prefix_guard], [text[prefix_guard:] for text in texts]

@@ -78,3 +78,12 @@ def test_documentation_ok_dict_no_policy_example():
     mapping = {0: "bar/baz", 1: "bar/bazaar"}
     expect = ('', [{0: 'bar/baz', 1: 'bar/bazaar'}])
     assert pr.prefix_compression(mapping, policy=None) == expect
+
+
+def test_prefix_compression_documentation_nok_class_instance_no_policy_example():
+    class Foo:
+        pass
+    an_object = Foo()
+    message = r"'Foo' object is not iterable"
+    with pytest.raises(TypeError, match=message):
+        pr.prefix_compression(an_object, policy=None)

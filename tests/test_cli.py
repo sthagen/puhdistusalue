@@ -18,14 +18,16 @@ def test_main_nok_int():
 
 def test_main_nok_ints():
     sequence_of_ints = [1, 2, 3]
-    assert pathlib.Path(str(sequence_of_ints[0])).is_dir() is False, "Unexpected folder 1 exists which breaks this test"
+    nef = str(sequence_of_ints[0])
+    assert pathlib.Path(nef).is_dir() is False, f"Unexpected folder {nef} exists which breaks this test"
     message = f"\\[Errno 20\\] Not a directory: {sequence_of_ints[0]}"
     with pytest.raises(NotADirectoryError, match=message):
         cli.main(sequence_of_ints)
 
 
 def test_main_nok_non_existing_folder():
-    non_existing_folder_path = 'folder_does_not_exist'
+    nef = non_existing_folder_path = 'folder_does_not_exist'
+    assert pathlib.Path(nef).is_dir() is False, f"Unexpected folder {nef} exists which breaks this test"
     message = f"\\[Errno 2\\] No such file or directory: '{non_existing_folder_path}'"
     with pytest.raises(FileNotFoundError, match=message):
         cli.main([non_existing_folder_path])

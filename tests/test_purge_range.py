@@ -30,3 +30,8 @@ def test_purge_range_ok_strings():
 def test_purge_range_ok_disjoint_strings():
     texts = ["a", "b"]
     assert pr.prefix_compression(texts) == ("", texts)
+
+
+def test_purge_range_ok_empty():
+    texts = []
+    assert pr.prefix_compression(texts) == ("", texts)

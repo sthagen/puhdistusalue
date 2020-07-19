@@ -53,3 +53,9 @@ def test_prefix_compression_documentation_ok_example():
     sequence = ["bar/baz", "bar/bazaar"]
     expect = ("bar/", ["baz", "bazaar"])
     assert pr.prefix_compression(sequence, policy=lambda x: x == "/") == expect
+
+
+def test_prefix_compression_documentation_ok_no_policy_example():
+    sequence = ["bar/baz", "bar/bazaar"]
+    expect = ("bar/baz", ["", "aar"])
+    assert pr.prefix_compression(sequence, policy=None) == expect

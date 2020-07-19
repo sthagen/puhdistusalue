@@ -35,3 +35,9 @@ def test_purge_range_ok_disjoint_strings():
 def test_purge_range_ok_empty():
     texts = []
     assert pr.prefix_compression(texts) == ("", texts)
+
+
+def test_purge_range_nok_ints():
+    message = r"'int' object is not iterable"
+    with pytest.raises(TypeError, match=message):
+        pr.prefix_compression([1, 2, 3])

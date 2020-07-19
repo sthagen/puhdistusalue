@@ -21,3 +21,7 @@ def test_purge_range_ok_same_chars_in_string():
 
 def test_purge_range_ok_sequence_string():
     assert pr.prefix_compression(["aa"]) == ("aa", [""])
+
+
+def test_purge_range_ok_strings():
+    assert pr.prefix_compression(["aa", "ab"]) == ("a", ["a", "b"])

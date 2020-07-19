@@ -25,3 +25,8 @@ def test_purge_range_ok_sequence_string():
 
 def test_purge_range_ok_strings():
     assert pr.prefix_compression(["aa", "ab"]) == ("a", ["a", "b"])
+
+
+def test_purge_range_ok_disjoint_strings():
+    texts = ["a", "b"]
+    assert pr.prefix_compression(texts) == ("", texts)

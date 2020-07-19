@@ -41,3 +41,9 @@ def test_purge_range_nok_ints():
     message = r"'int' object is not iterable"
     with pytest.raises(TypeError, match=message):
         pr.prefix_compression([1, 2, 3])
+
+
+def test_purge_range_nok_floats():
+    message = r"'float' object is not iterable"
+    with pytest.raises(TypeError, match=message):
+        pr.prefix_compression([0.123, 3.1415])

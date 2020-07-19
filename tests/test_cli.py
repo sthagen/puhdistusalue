@@ -22,3 +22,10 @@ def test_main_nok_ints():
     message = f"\\[Errno 20\\] Not a directory: {sequence_of_ints[0]}"
     with pytest.raises(NotADirectoryError, match=message):
         cli.main(sequence_of_ints)
+
+
+def test_main_nok_non_existing_folder():
+    non_existing_folder_path = 'folder_does_not_exist'
+    message = f"\\[Errno 2\\] No such file or directory: '{non_existing_folder_path}'"
+    with pytest.raises(FileNotFoundError, match=message):
+        cli.main([non_existing_folder_path])

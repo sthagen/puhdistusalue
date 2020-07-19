@@ -47,3 +47,9 @@ def test_purge_range_nok_floats():
     message = r"'float' object is not iterable"
     with pytest.raises(TypeError, match=message):
         pr.prefix_compression([0.123, 3.1415])
+
+
+def test_prefix_compression_documentation_ok_example():
+    sequence = ["bar/baz", "bar/bazaar"]
+    expect = ("bar/", ["baz", "bazaar"])
+    assert pr.prefix_compression(sequence, policy=lambda x: x == "/") == expect

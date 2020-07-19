@@ -13,3 +13,10 @@ def test_main_nok_int():
     message = r"argument of type 'int' is not iterable"
     with pytest.raises(TypeError, match=message):
         cli.main(42)
+
+
+def test_main_nok_ints():
+    sequence_of_ints = [1, 2, 3]
+    message = f"\\[Errno 20\\] Not a directory: {sequence_of_ints[0]}"
+    with pytest.raises(NotADirectoryError, match=message):
+        cli.main(sequence_of_ints)

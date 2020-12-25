@@ -9,4 +9,4 @@ More info needed?
 
 ... read the source, Luke.
 
-The default branch (with special meaning to github and gitlab users) has the name `default` :wink:
+The default branch has the name `default`.

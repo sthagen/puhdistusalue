@@ -10,4 +10,4 @@ More info needed?
 
 ... read the source, Luke.
 
-The default branch has the name `default`.
+**Note**: The default branch is `default`.

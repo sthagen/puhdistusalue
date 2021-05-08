@@ -89,7 +89,7 @@ def test_prefix_compression_documentation_nok_class_instance_no_policy_example()
         pr.prefix_compression(an_object, policy=None)
 
 
-def test_main_ok_distinct_timestamps_folder():
+def test_triage_hashes_ok_mixed_input():
     data = {
         "no": [("matter", 4), ("remove", 4), ("what", 4)],
         "we": [("keep", 1)],

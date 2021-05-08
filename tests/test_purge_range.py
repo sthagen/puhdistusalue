@@ -98,3 +98,14 @@ def test_triage_hashes_ok_mixed_input():
     keep, remove = pr.triage_hashes(data)
     assert keep == ['matter', 'what', 'keep']
     assert remove == ['remove', 'empty']
+
+
+def test_triage_hashes_ok_mixed_input_no_reorder():
+    data = {
+        "a": [("z", 4), ("a", 4), ("y", 4)],
+        "b": [("x", 1), ("y", 2), ("x", 3)],
+        "c": [("_", 0)],
+    }
+    keep, remove = pr.triage_hashes(data)
+    assert keep == ['z', 'y', 'x', 'x']
+    assert remove == ['a', 'y', '_']

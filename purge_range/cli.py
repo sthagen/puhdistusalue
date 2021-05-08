@@ -9,7 +9,8 @@ the natural order relates to the notion of fresher or better.
 import os
 import sys
 
-from purge_range.purge_range import prefix_compression, read_folder, triage_hashes
+from prefix_compression.prefix_compression import prefix_compression
+from purge_range.purge_range import read_folder, triage_hashes
 
 DEBUG = os.getenv("PURGE_RANGE_DEBUG")
 

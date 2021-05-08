@@ -39,3 +39,12 @@ def test_main_nok_non_existing_folder_verbose():
     message = f"\\[Errno 2\\] No such file or directory: '{non_existing_folder_path}'"
     with pytest.raises(FileNotFoundError, match=message):
         cli.main([non_existing_folder_path, "-v"])
+
+
+def test_main_ok_distinct_timestamps_folder(capsys):
+    dist_ts_folder = str(pathlib.Path("tests", "fixtures", "timestamps", "all_distinct"))
+    cli.main([dist_ts_folder])
+    out, err = capsys.readouterr()
+    assert "removed 0 total redundant objects or 0 total bytes" in out
+    assert dist_ts_folder in out
+    assert not err

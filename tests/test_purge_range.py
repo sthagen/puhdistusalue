@@ -87,3 +87,14 @@ def test_prefix_compression_documentation_nok_class_instance_no_policy_example()
     message = r"'Foo' object is not iterable"
     with pytest.raises(TypeError, match=message):
         pr.prefix_compression(an_object, policy=None)
+
+
+def test_main_ok_distinct_timestamps_folder():
+    data = {
+        "no": [("matter", 4), ("remove", 4), ("what", 4)],
+        "we": [("keep", 1)],
+        "maybe": [("empty", 0)],
+    }
+    keep, remove = pr.triage_hashes(data)
+    assert keep == ['matter', 'what', 'keep']
+    assert remove == ['remove', 'empty']

@@ -31,3 +31,11 @@ def test_main_nok_non_existing_folder():
     message = f"\\[Errno 2\\] No such file or directory: '{non_existing_folder_path}'"
     with pytest.raises(FileNotFoundError, match=message):
         cli.main([non_existing_folder_path])
+
+
+def test_main_nok_non_existing_folder_verbose():
+    nef = non_existing_folder_path = 'folder_does_not_exist'
+    assert pathlib.Path(nef).is_dir() is False, f"Unexpected folder {nef} exists which breaks this test"
+    message = f"\\[Errno 2\\] No such file or directory: '{non_existing_folder_path}'"
+    with pytest.raises(FileNotFoundError, match=message):
+        cli.main([non_existing_folder_path, "-v"])

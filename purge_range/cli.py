@@ -22,8 +22,6 @@ def main(argv=None):
     folder_paths = [entry for entry in argv if entry not in ("-v", "--verbose")]
     total_removed, total_less_bytes = 0, 0
     for a_path in folder_paths:
-        if a_path in ("-v", "--verbose"):
-            continue
         hash_map = read_folder(a_path)
         keep_these, remove_those = triage_hashes(hash_map)
         for this in keep_these:

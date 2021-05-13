@@ -1,4 +1,4 @@
-# python-purge_range
+# purge-range
 
 [![license](https://img.shields.io/github/license/sthagen/python-purge_range.svg?style=flat)](https://github.com/sthagen/python-purge_range/blob/default/LICENSE)
 [![version](https://img.shields.io/pypi/v/purge-range.svg?style=flat)](https://pypi.python.org/pypi/purge-range/)
@@ -8,6 +8,10 @@
 [![supported-implementations](https://img.shields.io/pypi/implementation/purge-range.svg?style=flat)](https://pypi.python.org/pypi/purge-range/)
 
 Purge monotonically named files in folders keeping range endpoints.
+
+[![Scrutinizer Status](https://img.shields.io/scrutinizer/g/sthagen/python-purge_range/default.svg?style=flat)](https://scrutinizer-ci.com/g/sthagen/python-purge_range/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/679f998a176eec24c971/maintainability)](https://codeclimate.com/github/sthagen/python-nineties/maintainability)
+[![Known Vulnerabilities](https://snyk.io/test/github/sthagen/python-purge_range/badge.svg)](https://snyk.io/test/github/sthagen/python-purge_range/)
 
 ## Status
 Experimental

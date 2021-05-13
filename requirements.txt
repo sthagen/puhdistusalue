@@ -1,1 +1,1 @@
-prefix-compression
+prefix-compression>=0.0.1

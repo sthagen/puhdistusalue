@@ -11,10 +11,6 @@ Puhdistusalue (Finnish for clean area here meaning purge range).
 
 Purge monotonically named files in folders keeping range endpoints.
 
-[![Scrutinizer Status](https://img.shields.io/scrutinizer/g/sthagen/python-purge_range/default.svg?style=flat)](https://scrutinizer-ci.com/g/sthagen/python-purge_range/)
-[![Maintainability](https://api.codeclimate.com/v1/badges/16d1c0b14a250d972842/maintainability)](https://codeclimate.com/github/sthagen/python-purge_range/maintainability)
-[![Known Vulnerabilities](https://snyk.io/test/github/sthagen/python-purge_range/badge.svg)](https://snyk.io/test/github/sthagen/python-purge_range/)
-
 ## Status
 Experimental
 

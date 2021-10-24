@@ -1,4 +1,4 @@
-# purge-range
+# puhdistusalue
 
 [![license](https://img.shields.io/github/license/sthagen/python-purge_range.svg?style=flat)](https://github.com/sthagen/python-purge_range/blob/default/LICENSE)
 [![version](https://img.shields.io/pypi/v/purge-range.svg?style=flat)](https://pypi.python.org/pypi/purge-range/)
@@ -6,6 +6,8 @@
 [![wheel](https://img.shields.io/pypi/wheel/purge-range.svg?style=flat)](https://pypi.python.org/pypi/purge-range/)
 [![supported-versions](https://img.shields.io/pypi/pyversions/purge-range.svg?style=flat)](https://pypi.python.org/pypi/purge-range/)
 [![supported-implementations](https://img.shields.io/pypi/implementation/purge-range.svg?style=flat)](https://pypi.python.org/pypi/purge-range/)
+
+Puhdistusalue (Finnish for clean area here meaning purge range).
 
 Purge monotonically named files in folders keeping range endpoints.
 

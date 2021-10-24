@@ -1,16 +1,68 @@
-SHELL = /bin/bash
-package = shagen/purge-range
+SSHELL = /bin/bash
+package = shagen/puhdistusalue
 
-.PHONY: all available
-all:
-	@echo "usage: "
-	@echo "       make clean - removes output files"
-	@echo "       make image - builds container image"
-	@echo "       make available - push container image to docker hub"
+.DEFAULT_GOAL := all
+isort = isort puhdistusalue tests
+black = black -S -l 120 --target-version py38 puhdistusalue tests
 
+.PHONY: install
+install:
+	pip install -U pip wheel
+	pip install -r tests/requirements.txt
+	pip install -U .
+
+.PHONY: install-all
+install-all: install
+	pip install -r tests/requirements-dev.txt
+
+.PHONY: isort
+format:
+	$(isort)
+	$(black)
+
+.PHONY: init
+init:
+	pip install -r tests/requirements.txt
+	pip install -r tests/requirements-dev.txt
+
+.PHONY: lint
+lint:
+	python setup.py check -ms
+	flake8 puhdistusalue/ tests/
+	$(isort) --check-only --df
+	$(black) --check --diff
+
+.PHONY: mypy
+mypy:
+	mypy puhdistusalue
+
+.PHONY: test
+test: clean
+	pytest --cov=puhdistusalue --log-format="%(levelname)s %(message)s"
+
+.PHONY: testcov
+testcov: test
+	@echo "building coverage html"
+	@coverage html
+
+.PHONY: all
+all: lint mypy testcov
+
+.PHONY: clean
 clean:
-	@echo "- removing output files"
+	@rm -rf `find . -name __pycache__`
+	@rm -f `find . -type f -name '*.py[co]' `
+	@rm -f `find . -type f -name '*~' `
+	@rm -f `find . -type f -name '.*~' `
+	@rm -rf .cache
+	@rm -rf htmlcov
+	@rm -rf *.egg-info
+	@rm -f .coverage
+	@rm -f .coverage.*
+	@rm -rf build
 	@rm -f *.log
+	python setup.py clean
+	@git status
 
 image:
 	@echo "- building container image"

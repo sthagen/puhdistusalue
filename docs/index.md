@@ -13,13 +13,6 @@ Purge monotonically named files in folders keeping range endpoints.
 
 *Note*: Within a folder, only the ordering and the min-max membership to its content identity range determines to keep a file.
 
-Documentation:
-
-* [Installation](install.md)
-* [Use](use.md)
-* [Command Line API](api.md)
-* [Changes](changes.md)
-
 ## Status
 
 Experimental.

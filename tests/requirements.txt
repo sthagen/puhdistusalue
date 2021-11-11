@@ -1,4 +1,4 @@
-coverage==6.0.2
+coverage==6.1.2
 pygments==2.10.0
 pytest==6.2.5
 pytest-asyncio==0.16.0

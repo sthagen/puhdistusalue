@@ -1,5 +1,9 @@
 # Change History
 
+## 2021.12.16
+
+* Fixed app not starting issue #54 (Fix the startup error for standalone app)
+
 ## 2021.10.24
 
 * Intermediate release with new dev tools

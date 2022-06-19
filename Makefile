@@ -38,7 +38,7 @@ mypy:
 
 .PHONY: test
 test: clean
-	pytest --asyncio-mode=strict --cov=puhdistusalue --log-format="%(levelname)s %(message)s"
+	pytest --asyncio-mode=strict --cov=puhdistusalue --cov-report term-missing:skip-covered --cov-branch --log-format="%(levelname)s %(message)s"
 
 .PHONY: testcov
 testcov: test

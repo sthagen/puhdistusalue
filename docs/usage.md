@@ -3,7 +3,7 @@
 Folder with only distinct files (normal mode):
 ```
 $ puhdistusalue tests/fixtures/timestamps/all_distinct
-removed 0 total redundant objects or 0 total bytes from folders at ['tests/fixtures/timestamps/all_distinct']
+removed 0 total redundant objects or 0 total bytes from folders at ['tests/fixtures/timestamps/all_distinct'] in 0.121 s
 ```
 
 Folder with only distinct files and calling the module's main function per python (debug mode):
@@ -14,5 +14,5 @@ KEEP file 20210508T111757.integer
 KEEP file 20210508T111821.integer
 KEEP file 20210508T111830.integer
 KEEP file 20210508T111853.integer
-removed 0 total redundant objects or 0 total bytes from folders at ['tests/fixtures/timestamps/all_distinct']
+removed 0 total redundant objects or 0 total bytes from folders at ['tests/fixtures/timestamps/all_distinct'] in 0.123 s
 ```

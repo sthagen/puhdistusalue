@@ -56,5 +56,5 @@ def main(argv=None):
     print(
         f'removed {total_removed} total redundant objects or {total_less_bytes}'
         f' total bytes from folders at {folders_disp}'
-        f' in {(dti.datetime.utcnow() - start_time).total_seconds} s'
+        f' in {(dti.datetime.utcnow() - start_time).total_seconds()} s'
     )

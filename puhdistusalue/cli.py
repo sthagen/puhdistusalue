@@ -6,6 +6,7 @@
 Implementation uses sha256 hashes for identity and assumes that
 the natural order relates to the notion of fresher or better.
 """
+import datetime as dti
 import os
 import sys
 import typing
@@ -21,6 +22,7 @@ DEBUG = os.getenv('PURGE_RANGE_DEBUG')
 @typing.no_type_check
 def main(argv=None):
     """Process the files separately per folder."""
+    start_time = dti.datetime.utcnow()
     argv = sys.argv[1:] if argv is None else argv
     verbose = True if '-v' in argv or '--verbose' in argv else False
     folder_paths = [entry for entry in argv if entry not in ('-v', '--verbose')]
@@ -54,4 +56,5 @@ def main(argv=None):
     print(
         f'removed {total_removed} total redundant objects or {total_less_bytes}'
         f' total bytes from folders at {folders_disp}'
+        f' in {(dti.datetime.utcnow() - start_time).total_seconds} s'
     )

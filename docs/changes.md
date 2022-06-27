@@ -1,5 +1,9 @@
 # Change History
 
+## 2022.6.28
+
+* Hotfix to make new duration reporting useful
+
 ## 2022.6.27
 
 * Maintenance release with updated dependencies (production, development, and test)

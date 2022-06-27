@@ -1,5 +1,9 @@
 # Change History
 
+## 2022.6.27
+
+* Maintenance release with updated dependencies (production, development, and test)
+
 ## 2021.12.16
 
 * Fixed app not starting issue #54 (Fix the startup error for standalone app)

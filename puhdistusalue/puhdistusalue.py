@@ -1,4 +1,3 @@
-#! /usr/bin/env python
 # -*- coding: utf-8 -*-
 """Purge monotonically named files in folders keeping range endpoints.
 
@@ -35,6 +34,7 @@ def read_folder(folder_path, get_size=os.path.getsize):
             for byte_block in iter(lambda in_f=in_file: in_f.read(BUFFER_BYTES), b''):
                 sha256_hash.update(byte_block)
             hash_map.setdefault(sha256_hash.hexdigest(), []).append((name, get_size(file_path)))
+
     return hash_map
 
 
@@ -60,4 +60,5 @@ def triage_hashes(hash_map):
                 first, last = info[0][0], info[-1][0]
                 keep.extend([first, last])
                 remove.extend(name for name, _ in info[1:-1])
+
     return keep, remove

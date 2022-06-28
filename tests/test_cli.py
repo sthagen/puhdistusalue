@@ -21,8 +21,8 @@ def test_main_nok_ints():
     sequence_of_ints = [1, 2, 3]
     nef = str(sequence_of_ints[0])
     assert pathlib.Path(nef).is_dir() is False, f'Unexpected folder {nef} exists which breaks this test'
-    message = f'\\[Errno 20\\] Not a directory: {sequence_of_ints[0]}'
-    with pytest.raises(NotADirectoryError, match=message):
+    message = r"'int' object has no attribute 'strip'"
+    with pytest.raises(AttributeError, match=message):
         cli.main(sequence_of_ints)
 
 

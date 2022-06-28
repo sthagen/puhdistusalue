@@ -25,7 +25,8 @@ def main(argv=None):
     start_time = dti.datetime.utcnow()
     argv = sys.argv[1:] if argv is None else argv
     verbose = True if '-v' in argv or '--verbose' in argv else False
-    folder_paths = [entry for entry in argv if entry not in ('-v', '--verbose')]
+    human = True if '-H' in argv or '--human' in argv else False
+    folder_paths = [entry for entry in argv if entry not in ('-H', '--human', '-v', '--verbose')]
     total_removed, total_less_bytes = 0, 0
     for a_path in folder_paths:
         hash_map = read_folder(a_path)
@@ -53,8 +54,20 @@ def main(argv=None):
         folders_disp = f"{prefix}[{', '.join(rel_paths[:3])}, ... {rel_paths[-1]}]"
     else:
         folders_disp = f'{folder_paths}'
+
+    quantity, unit = f'{total_less_bytes :d}', 'total bytes'
+    if human:
+        if total_less_bytes >= 1e9:
+            quantity, unit = f'{round(total_less_bytes / 1024 / 1024 / 1024, 3) :.3f}', 'total gigabytes'
+        elif total_less_bytes >= 1e6:
+            quantity, unit = f'{round(total_less_bytes / 1024 / 1024, 3) :.3f}', 'total megabytes'
+        elif total_less_bytes >= 1e3:
+            quantity, unit = f'{round(total_less_bytes / 1024, 3) :.3f}', 'total kilobytes'
+        else:
+            quantity, unit = f'{total_less_bytes :d}', 'total bytes'
+
     print(
-        f'removed {total_removed} total redundant objects or {total_less_bytes}'
-        f' total bytes from folders at {folders_disp}'
+        f'removed {total_removed} total redundant objects or'
+        f' {quantity} {unit} from folders at {folders_disp}'
         f' in {(dti.datetime.utcnow() - start_time).total_seconds()} s'
     )

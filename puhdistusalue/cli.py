@@ -18,6 +18,32 @@ from puhdistusalue.puhdistusalue import read_folder, triage_hashes
 DEBUG = os.getenv('PURGE_RANGE_DEBUG')
 
 
+@typing.no_type_check
+def humanize_mass(total_less_bytes: int):
+    """DRY"""
+    if total_less_bytes >= 1e9:
+        return f'{round(total_less_bytes / 1024 / 1024 / 1024, 3) :.3f}', 'total gigabytes'
+    elif total_less_bytes >= 1e6:
+        return f'{round(total_less_bytes / 1024 / 1024, 3) :.3f}', 'total megabytes'
+    elif total_less_bytes >= 1e3:
+        return f'{round(total_less_bytes / 1024, 3) :.3f}', 'total kilobytes'
+
+    return f'{total_less_bytes :d}', 'total bytes'
+
+
+@typing.no_type_check
+def humanize_duration(duration_seconds: float):
+    """DRY"""
+    if duration_seconds >= 3600:
+        return f'{round(duration_seconds / 60 / 60, 3) :.3f}', 'hours'
+    elif duration_seconds >= 60:
+        return f'{round(duration_seconds / 60, 3) :.3f}', 'minutes'
+    elif duration_seconds >= 1:
+        return f'{round(duration_seconds, 3) :.3f}', 'seconds'
+
+    return f'{round(duration_seconds * 1e3, 3) :.3f}', 'millis'
+
+
 # pylint: disable=expression-not-assigned
 @typing.no_type_check
 def main(argv=None):
@@ -61,25 +87,12 @@ def main(argv=None):
         folders_disp = f'{folder_paths}' if folder_paths else '[<EMPTY>]'
 
     duration_seconds = (dti.datetime.utcnow() - start_time).total_seconds()
-    m_quantity, m_unit = f'{total_less_bytes :d}', 'total bytes'
-    d_quantity, d_unit = f'{round(duration_seconds, 3) :.3f}', 'seconds'
     if human:
-        if total_less_bytes >= 1e9:
-            m_quantity, m_unit = f'{round(total_less_bytes / 1024 / 1024 / 1024, 3) :.3f}', 'total gigabytes'
-        elif total_less_bytes >= 1e6:
-            m_quantity, m_unit = f'{round(total_less_bytes / 1024 / 1024, 3) :.3f}', 'total megabytes'
-        elif total_less_bytes >= 1e3:
-            m_quantity, m_unit = f'{round(total_less_bytes / 1024, 3) :.3f}', 'total kilobytes'
-        else:
-            m_quantity, m_unit = f'{total_less_bytes :d}', 'total bytes'
-        if duration_seconds >= 3600:
-            d_quantity, d_unit = f'{round(duration_seconds / 60 / 60, 3) :.3f}', 'hours'
-        elif duration_seconds >= 60:
-            d_quantity, d_unit = f'{round(duration_seconds / 60, 3) :.3f}', 'minutes'
-        elif duration_seconds >= 1:
-            d_quantity, d_unit = f'{round(duration_seconds, 3) :.3f}', 'seconds'
-        else:
-            d_quantity, d_unit = f'{round(duration_seconds * 1e3, 3) :.3f}', 'millis'
+        m_quantity, m_unit = humanize_mass(total_less_bytes)
+        d_quantity, d_unit = humanize_duration(duration_seconds)
+    else:
+        m_quantity, m_unit = f'{total_less_bytes :d}', 'total bytes'
+        d_quantity, d_unit = f'{round(duration_seconds, 3) :.3f}', 'seconds'
 
     print(
         f'removed {total_removed} total redundant objects or'

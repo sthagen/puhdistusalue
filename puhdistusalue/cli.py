@@ -29,25 +29,30 @@ def main(argv=None):
     folder_paths = [entry for entry in argv if entry.strip() and entry not in ('-H', '--human', '-v', '--verbose')]
     total_removed, total_less_bytes = 0, 0
     for a_path in folder_paths:
-        hash_map = read_folder(a_path)
-        keep_these, remove_those = triage_hashes(hash_map)
-        for this in keep_these:
-            DEBUG and print(f'KEEP file {this}')
-        folder_removed, folder_less_bytes = 0, 0
-        for that in remove_those:
-            DEBUG and print(f'REMOVE file {that}')
-            target = os.path.join(a_path, that)
-            folder_less_bytes += os.path.getsize(target)
-            os.remove(target)
-            folder_removed += 1
+        hash_map = {}
+        try:
+            hash_map = read_folder(a_path)
+        except FileNotFoundError as err:
+            print(f'WARNING: Skipping non-existing path ({a_path}) -> "{err}"')
+        if hash_map:
+            keep_these, remove_those = triage_hashes(hash_map)
+            for this in keep_these:
+                DEBUG and print(f'KEEP file {this}')
+            folder_removed, folder_less_bytes = 0, 0
+            for that in remove_those:
+                DEBUG and print(f'REMOVE file {that}')
+                target = os.path.join(a_path, that)
+                folder_less_bytes += os.path.getsize(target)
+                os.remove(target)
+                folder_removed += 1
 
-        if verbose:
-            print(
-                f'removed {folder_removed} redundant objects or {folder_less_bytes}'
-                f' combined bytes from folder at {a_path}'
-            )
-        total_less_bytes += folder_less_bytes
-        total_removed += folder_removed
+            if verbose:
+                print(
+                    f'removed {folder_removed} redundant objects or {folder_less_bytes}'
+                    f' combined bytes from folder at {a_path}'
+                )
+            total_less_bytes += folder_less_bytes
+            total_removed += folder_removed
 
     prefix, rel_paths = prefix_compression(folder_paths, policy=lambda x: x == '/')
     if len(rel_paths) > 5:
@@ -55,19 +60,29 @@ def main(argv=None):
     else:
         folders_disp = f'{folder_paths}' if folder_paths else '[<EMPTY>]'
 
-    quantity, unit = f'{total_less_bytes :d}', 'total bytes'
+    duration_seconds = (dti.datetime.utcnow() - start_time).total_seconds()
+    m_quantity, m_unit = f'{total_less_bytes :d}', 'total bytes'
+    d_quantity, d_unit = f'{round(duration_seconds, 3) :.3f}', 'seconds'
     if human:
         if total_less_bytes >= 1e9:
-            quantity, unit = f'{round(total_less_bytes / 1024 / 1024 / 1024, 3) :.3f}', 'total gigabytes'
+            m_quantity, m_unit = f'{round(total_less_bytes / 1024 / 1024 / 1024, 3) :.3f}', 'total gigabytes'
         elif total_less_bytes >= 1e6:
-            quantity, unit = f'{round(total_less_bytes / 1024 / 1024, 3) :.3f}', 'total megabytes'
+            m_quantity, m_unit = f'{round(total_less_bytes / 1024 / 1024, 3) :.3f}', 'total megabytes'
         elif total_less_bytes >= 1e3:
-            quantity, unit = f'{round(total_less_bytes / 1024, 3) :.3f}', 'total kilobytes'
+            m_quantity, m_unit = f'{round(total_less_bytes / 1024, 3) :.3f}', 'total kilobytes'
         else:
-            quantity, unit = f'{total_less_bytes :d}', 'total bytes'
+            m_quantity, m_unit = f'{total_less_bytes :d}', 'total bytes'
+        if duration_seconds >= 3600:
+            d_quantity, d_unit = f'{round(duration_seconds / 60 / 60, 3) :.3f}', 'hours'
+        elif duration_seconds >= 60:
+            d_quantity, d_unit = f'{round(duration_seconds / 60, 3) :.3f}', 'minutes'
+        elif duration_seconds >= 1:
+            d_quantity, d_unit = f'{round(duration_seconds, 3) :.3f}', 'seconds'
+        else:
+            d_quantity, d_unit = f'{round(duration_seconds * 1e3, 3) :.3f}', 'millis'
 
     print(
         f'removed {total_removed} total redundant objects or'
-        f' {quantity} {unit} from folders at {folders_disp}'
-        f' in {(dti.datetime.utcnow() - start_time).total_seconds()} s'
+        f' {m_quantity} {m_unit} from folders at {folders_disp}'
+        f' in {d_quantity} {d_unit}'
     )

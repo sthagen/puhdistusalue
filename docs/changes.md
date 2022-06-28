@@ -3,6 +3,8 @@
 ## 2022.6.29
 
 * Added -H, --human option to offer reporting the total "mass" purged in easier to grok quantities and units
+* Shield against spaces as paths and more clearly indicate when no valid path was assessed at all
+
 ## 2022.6.28
 
 * Hotfix to make new duration reporting useful

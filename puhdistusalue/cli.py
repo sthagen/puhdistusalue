@@ -26,7 +26,7 @@ def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     verbose = True if '-v' in argv or '--verbose' in argv else False
     human = True if '-H' in argv or '--human' in argv else False
-    folder_paths = [entry for entry in argv if entry not in ('-H', '--human', '-v', '--verbose')]
+    folder_paths = [entry for entry in argv if entry.strip() and entry not in ('-H', '--human', '-v', '--verbose')]
     total_removed, total_less_bytes = 0, 0
     for a_path in folder_paths:
         hash_map = read_folder(a_path)
@@ -53,7 +53,7 @@ def main(argv=None):
     if len(rel_paths) > 5:
         folders_disp = f"{prefix}[{', '.join(rel_paths[:3])}, ... {rel_paths[-1]}]"
     else:
-        folders_disp = f'{folder_paths}'
+        folders_disp = f'{folder_paths}' if folder_paths else '[<EMPTY>]'
 
     quantity, unit = f'{total_less_bytes :d}', 'total bytes'
     if human:

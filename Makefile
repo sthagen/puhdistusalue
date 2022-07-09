@@ -2,18 +2,18 @@ SSHELL = /bin/bash
 package = shagen/puhdistusalue
 
 .DEFAULT_GOAL := all
-isort = isort puhdistusalue tests
-black = black -S -l 120 --target-version py39 puhdistusalue tests
+isort = isort puhdistusalue test
+black = black -S -l 120 --target-version py39 puhdistusalue test
 
 .PHONY: install
 install:
 	pip install -U pip wheel
-	pip install -r tests/requirements.txt
+	pip install -r test/requirements.txt
 	pip install -U .
 
 .PHONY: install-all
 install-all: install
-	pip install -r tests/requirements-dev.txt
+	pip install -r test/requirements-dev.txt
 
 .PHONY: format
 format:
@@ -22,13 +22,13 @@ format:
 
 .PHONY: init
 init:
-	pip install -r tests/requirements.txt
-	pip install -r tests/requirements-dev.txt
+	pip install -r test/requirements.txt
+	pip install -r test/requirements-dev.txt
 
 .PHONY: lint
 lint:
 	python setup.py check -ms
-	flake8 puhdistusalue/ tests/
+	flake8 puhdistusalue/ test/
 	$(isort) --check-only --df
 	$(black) --check --diff
 

@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-# pylint: disable=line-too-long
 """Purge monotonically named files in folders keeping range endpoints.
 
 Implementation uses sha256 hashes for identity and assumes that
@@ -23,9 +22,9 @@ def humanize_mass(total_less_bytes: int):
     """DRY"""
     if total_less_bytes >= 1e9:
         return f'{round(total_less_bytes / 1024 / 1024 / 1024, 3) :.3f}', 'total gigabytes'
-    elif total_less_bytes >= 1e6:
+    if total_less_bytes >= 1e6:
         return f'{round(total_less_bytes / 1024 / 1024, 3) :.3f}', 'total megabytes'
-    elif total_less_bytes >= 1e3:
+    if total_less_bytes >= 1e3:
         return f'{round(total_less_bytes / 1024, 3) :.3f}', 'total kilobytes'
 
     return f'{total_less_bytes :d}', 'total bytes'
@@ -36,9 +35,9 @@ def humanize_duration(duration_seconds: float):
     """DRY"""
     if duration_seconds >= 3600:
         return f'{round(duration_seconds / 60 / 60, 3) :.3f}', 'hours'
-    elif duration_seconds >= 60:
+    if duration_seconds >= 60:
         return f'{round(duration_seconds / 60, 3) :.3f}', 'minutes'
-    elif duration_seconds >= 1:
+    if duration_seconds >= 1:
         return f'{round(duration_seconds, 3) :.3f}', 'seconds'
 
     return f'{round(duration_seconds * 1e3, 3) :.3f}', 'millis'
@@ -50,8 +49,8 @@ def main(argv=None):
     """Process the files separately per folder."""
     start_time = dti.datetime.utcnow()
     argv = sys.argv[1:] if argv is None else argv
-    verbose = True if '-v' in argv or '--verbose' in argv else False
-    human = True if '-H' in argv or '--human' in argv else False
+    verbose = bool('-v' in argv or '--verbose' in argv)
+    human = bool('-H' in argv or '--human' in argv)
     folder_paths = [entry for entry in argv if entry.strip() and entry not in ('-H', '--human', '-v', '--verbose')]
     total_removed, total_less_bytes = 0, 0
     for a_path in folder_paths:

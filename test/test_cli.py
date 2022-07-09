@@ -39,7 +39,7 @@ def test_main_nok_non_existing_folder_verbose():
 
 
 def test_main_ok_distinct_timestamps_folder(capsys):
-    dist_ts_folder = str(pathlib.Path('tests', 'fixtures', 'timestamps', 'all_distinct'))
+    dist_ts_folder = str(pathlib.Path('test', 'fixtures', 'timestamps', 'all_distinct'))
     cli.main([dist_ts_folder])
     out, err = capsys.readouterr()
     assert 'removed 0 total redundant objects or 0 total bytes' in out

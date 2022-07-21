@@ -3,6 +3,7 @@
 Puhdistusalue (Finnish for clean area here meaning purge range).
 
 [![license](https://img.shields.io/github/license/sthagen/puhdistusalue.svg?style=flat)](https://github.com/sthagen/puhdistusalue/blob/default/LICENSE)
+
 [![version](https://img.shields.io/pypi/v/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
 [![downloads](https://img.shields.io/pypi/dm/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
 [![wheel](https://img.shields.io/pypi/wheel/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)

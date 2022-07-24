@@ -1,5 +1,5 @@
 site_name: Puhdistusalue
-site_description: 
+site_description: "Puhdistusalue (Finnish for clean area here meaning purge range) - Purge monotonically named files in folders keeping range endpoints."
 
 theme:
   name: 'material'
@@ -26,7 +26,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/sthagen/puhdistusalue
+      link: https://git.sr.ht/~sthagen/puhdistusalue
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/puhdistusalue
     - icon: fontawesome/brands/linkedin
@@ -34,8 +34,8 @@ extra:
 
 copyright: Copyright &copy; 2022 Stefan Hagen under the MIT license
 
-repo_name: sthagen/puhdistusalue
-repo_url: https://github.com/sthagen/puhdistusalue
+repo_name: ~sthagen/puhdistusalue
+repo_url: https://git.sr.ht/~sthagen/puhdistusalue
 edit_uri: ""
 
 plugins:

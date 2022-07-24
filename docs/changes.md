@@ -1,5 +1,15 @@
 # Change History
 
+## 2022.7.24
+
+* Bumped dependency [puristaa](https://pypi.python.org/pypi/puristaa/)
+* Bumped dependencies for development and test
+* Fixed internal package version
+* Moved documentation to https://codes.dilettant.life/docs/puhdistusalue
+* Moved tracker to https://todo.sr.ht/~sthagen/puhdistusalue
+* Moved normative source repo to https://git.sr.ht/~sthagen/puhdistusalue
+* Added test coverage link to documentation and coverage to https://codes.dilettant.life/coverage/puhdistusalue
+
 ## 2022.6.29
 
 * Added -H, --human option to offer reporting the total "mass" purged as well as duration the execution took in easier to grok quantities and units

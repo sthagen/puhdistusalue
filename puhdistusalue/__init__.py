@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 """Puhdistusalue (Finnish for clean area here meaning purge range)."""
-__version__ = '2021.12.16'
+__version__ = '2022.7.24'

@@ -20,7 +20,7 @@ User and developer [documentation of puhdistusalue](https://codes.dilettant.life
 
 ## Bug Tracker
 
-Feature requests and bug reports are bested entered in the [todos of puhdistusalue](https://todo.sr.ht/~sthagen/puhdistusalue).
+Feature requests and bug reports are best entered in the [todos of puhdistusalue](https://todo.sr.ht/~sthagen/puhdistusalue).
 
 ## Primary Source repository
 

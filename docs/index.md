@@ -16,7 +16,7 @@ Purge monotonically named files in folders keeping range endpoints.
 
 ## Bug Tracker
 
-Feature requests and bug reports are bested entered in the [todos of puhdistusalue](https://todo.sr.ht/~sthagen/puhdistusalue).
+Feature requests and bug reports are best entered in the [todos of puhdistusalue](https://todo.sr.ht/~sthagen/puhdistusalue).
 
 ## Primary Source repository
 

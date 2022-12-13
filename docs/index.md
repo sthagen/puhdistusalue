@@ -1,12 +1,14 @@
 # puhdistusalue
 
-[License: MIT](https://git.sr.ht/~sthagen/puhdistusalue/tree/default/item/LICENSE)
-
 Puhdistusalue (Finnish for clean area here meaning purge range).
 
 Purge monotonically named files in folders keeping range endpoints.
 
 *Note*: Within a folder, only the ordering and the min-max membership to its content identity range determines to keep a file.
+
+[License: MIT](https://git.sr.ht/~sthagen/puhdistusalue/tree/default/item/LICENSE)
+
+Third party dependencies are documented in the folder [third-party](third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
 [![downloads](https://pepy.tech/badge/puhdistusalue/month)](https://pepy.tech/project/puhdistusalue)

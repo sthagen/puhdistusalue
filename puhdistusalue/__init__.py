@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Puhdistusalue (Finnish for clean area here meaning purge range)."""
 # [[[fill git_describe()]]]
 __version__ = '2022.12.13+parent.ff7049ef'

@@ -1,0 +1,3 @@
+digraph {
+	puristaa [label="puristaa\n2022.7.24"]
+}

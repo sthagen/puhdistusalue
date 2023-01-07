@@ -45,9 +45,6 @@ puhdistusalue = "puhdistusalue.cli:main"
 include = ["puhdistusalue"]
 exclude = ["test*"]
 
-[bdist_wheel]
-universal = true
-
 [tool.black]
 line-length = 120
 skip-string-normalization = true

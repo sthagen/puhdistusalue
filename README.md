@@ -8,7 +8,7 @@ Purge monotonically named files in folders keeping range endpoints.
 
 [License: MIT](https://git.sr.ht/~sthagen/puhdistusalue/tree/default/item/LICENSE)
 
-Third party dependencies are documented in the folder [third-party](third-party/README.md).
+Third party dependencies are documented in the folder [third-party](docs/third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
 [![downloads](https://pepy.tech/badge/puhdistusalue/month)](https://pepy.tech/project/puhdistusalue)

@@ -1,0 +1,46 @@
+{
+  "SPDXID" : "SPDXRef-DOCUMENT",
+  "spdxVersion" : "SPDX-2.3",
+  "creationInfo" : {
+    "comment" : "Converted from CycloneDX spec version 1.4",
+    "created" : "2023-06-24T20:40:39Z",
+    "creators" : [ "Tool: CycloneDX:cyclonedx-bom-3.11.0", "Tool: CycloneDX:cyclonedx-python-lib-3.1.1", "Tool: CycloneToSpdx-0.1.4" ],
+    "licenseListVersion" : "3.21"
+  },
+  "name" : "SBOM-for-puristaa",
+  "dataLicense" : "CC0-1.0",
+  "annotations" : [ {
+    "annotationDate" : "2023-06-24T20:40:40Z",
+    "annotationType" : "OTHER",
+    "annotator" : "Tool: CycloneToSpdx",
+    "comment" : "MISSING_CDX_PROPERTY:extensions={}"
+  } ],
+  "documentNamespace" : "https://cyclonedx/ed29a579-e04d-422f-b6d9-f656f8ddd23a_1",
+  "packages" : [ {
+    "SPDXID" : "SPDXRef-17b4eca2-e2e5-4132-bf69-a1a12682a161",
+    "annotations" : [ {
+      "annotationDate" : "2023-06-24T20:40:40Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:pypi/puristaa@2022.7.24",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "puristaa",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2022.7.24"
+  } ],
+  "relationships" : [ {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-17b4eca2-e2e5-4132-bf69-a1a12682a161"
+  } ]
+}

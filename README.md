@@ -15,6 +15,7 @@ Third party dependencies are documented in the folder [third-party](docs/third-p
 [![wheel](https://img.shields.io/pypi/wheel/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
 [![supported-versions](https://img.shields.io/pypi/pyversions/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
 [![supported-implementations](https://img.shields.io/pypi/implementation/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
+[![maintenance-status](https://img.shields.io/github/commit-activity/y/sthagen/puhdistusalue.svg?style=flat)](https://git.sr.ht/~sthagen/puhdistusalue/log)
 
 ## Documentation
 

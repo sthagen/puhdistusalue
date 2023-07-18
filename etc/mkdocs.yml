@@ -1,5 +1,7 @@
 site_name: Puhdistusalue
 site_description: "Puhdistusalue (Finnish for clean area here meaning purge range) - Purge monotonically named files in folders keeping range endpoints."
+docs_dir: ../docs
+site_dir: ../site
 
 theme:
   name: 'material'

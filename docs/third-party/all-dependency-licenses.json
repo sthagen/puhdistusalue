@@ -3,7 +3,7 @@
     "Author": "Stefan Hagen",
     "Description": "Puristaa (Finnish for compress) - shared prefix compression of ordered string sequences.",
     "License": "MIT License",
-    "LicenseFile": "/Users/ruth/.pyenv/versions/3.10.9/envs/puhdistusalue-3-10-9/lib/python3.10/site-packages/puristaa-2022.7.24.dist-info/LICENSE",
+    "LicenseFile": "/Users/ruth/.pyenv/versions/3.10.12/envs/puhdistusalue-3-10-12/lib/python3.10/site-packages/puristaa-2022.7.24.dist-info/LICENSE",
     "LicenseText": "MIT License\n\nCopyright (c) 2020 Stefan Hagen\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
     "Name": "puristaa",
     "NoticeFile": "UNKNOWN",

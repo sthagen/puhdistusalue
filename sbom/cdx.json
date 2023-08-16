@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:2c15889c-e6ee-4f49-9b7c-e7e7ef91436f",
+  "serialNumber": "urn:uuid:3f25f0f6-445f-472d-889a-a3bff7cb74bd",
   "version": 1,
   "metadata": {
-    "timestamp": "2023-08-15T06:19:35.810265+00:00",
+    "timestamp": "2023-08-16T06:40:00.157527+00:00",
     "tools": [
       {
         "vendor": "CycloneDX",
@@ -56,7 +56,7 @@
   "components": [
     {
       "type": "library",
-      "bom-ref": "4d4e05c2-adfe-4c2e-8833-20a0ee4fb7ec",
+      "bom-ref": "ef921c08-d029-4435-bc3b-63f5417c367d",
       "name": "puristaa",
       "version": "2022.7.24",
       "purl": "pkg:pypi/puristaa@2022.7.24"
@@ -64,7 +64,7 @@
   ],
   "dependencies": [
     {
-      "ref": "4d4e05c2-adfe-4c2e-8833-20a0ee4fb7ec",
+      "ref": "ef921c08-d029-4435-bc3b-63f5417c367d",
       "dependsOn": []
     }
   ]

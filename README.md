@@ -11,7 +11,7 @@ Purge monotonically named files in folders keeping range endpoints.
 Third party dependencies are documented in the folder [third-party](docs/third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
-[![downloads](https://pepy.tech/badge/puhdistusalue/month)](https://pepy.tech/project/puhdistusalue)
+[![downloads](https://static.pepy.tech/badge/puhdistusalue/month)](https://pepy.tech/project/puhdistusalue)
 [![wheel](https://img.shields.io/pypi/wheel/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
 [![supported-versions](https://img.shields.io/pypi/pyversions/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
 [![supported-implementations](https://img.shields.io/pypi/implementation/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)

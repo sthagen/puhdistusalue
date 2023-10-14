@@ -7,6 +7,7 @@ Purge monotonically named files in folders keeping range endpoints.
 *Note*: Within a folder, only the ordering and the min-max membership to its content identity range determines to keep a file.
 
 [License: MIT](https://git.sr.ht/~sthagen/puhdistusalue/tree/default/item/LICENSE)
+[Country of origin: Switzerland](https://git.sr.ht/~sthagen/puhdistusalue/tree/default/item/COUNTRY-OF-ORIGIN)
 
 Third party dependencies are documented in the folder [third-party](docs/third-party/README.md).
 

@@ -12,7 +12,7 @@ Purge monotonically named files in folders keeping range endpoints.
 [![Configuration](badges/configuration-sbom.svg)](third-party/index.html)
 
 [![Version](https://img.shields.io/pypi/v/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
-[![Downloads](https://static.pepy.tech/badge/puhdistusalue/month)](https://pepy.tech/project/puhdistusalue)
+[![Downloads](docs/badges/downloads-per-month.svg)](https://pepy.tech/project/puhdistusalue)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)
 [![Maintenance Status](docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/puhdistusalue/log)
 

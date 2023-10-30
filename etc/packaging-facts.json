@@ -1,0 +1,368 @@
+{
+  "info": {
+    "author": "Stefan Hagen",
+    "author_email": "stefan@hagen.link",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 4 - Beta",
+      "Intended Audience :: Developers",
+      "License :: OSI Approved :: MIT License",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.8",
+      "Programming Language :: Python :: 3.9",
+      "Topic :: Software Development :: Build Tools"
+    ],
+    "description": "# puhdistusalue\n\nPuhdistusalue (Finnish for clean area here meaning purge range).\n\n[License: MIT](https://git.sr.ht/~sthagen/puhdistusalue/tree/default/item/LICENSE)\n\nPurge monotonically named files in folders keeping range endpoints.\n\n*Note*: Within a folder, only the ordering and the min-max membership to its content identity range determines to keep a file.\n\n[![version](https://img.shields.io/pypi/v/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)\n[![downloads](https://img.shields.io/pypi/dm/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)\n[![wheel](https://img.shields.io/pypi/wheel/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)\n[![supported-versions](https://img.shields.io/pypi/pyversions/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)\n[![supported-implementations](https://img.shields.io/pypi/implementation/puhdistusalue.svg?style=flat)](https://pypi.python.org/pypi/puhdistusalue/)\n\n## Documentation\n\nUser and developer [documentation of puhdistusalue](https://codes.dilettant.life/docs/puhdistusalue).\n\n## Bug Tracker\n\nFeature requests and bug reports are bested entered in the [todos of puhdistusalue](https://todo.sr.ht/~sthagen/puhdistusalue).\n\n## Primary Source repository\n\nThe primary source repository of [puhdistusalue is at sourcehut](https://git.sr.ht/~sthagen/puhdistusalue)\na collection of tools useful for software development.\n\n## Status\n\nExperimental\n\n**Note**: The default branch is `default`.\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": "",
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "home_page": "https://git.sr.ht/~sthagen/puhdistusalue",
+    "keywords": "compression,developer-tools,file-processing",
+    "license": "",
+    "maintainer": "Stefan Hagen",
+    "maintainer_email": "stefan@hagen.link",
+    "name": "puhdistusalue",
+    "package_url": "https://pypi.org/project/puhdistusalue/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/puhdistusalue/",
+    "project_urls": {
+      "Bug Tracker": "https://todo.sr.ht/~sthagen/puhdistusalue",
+      "Documentation": "https://codes.dilettant.life/docs/puhdistusalue",
+      "Homepage": "https://git.sr.ht/~sthagen/puhdistusalue",
+      "Source Code": "https://git.sr.ht/~sthagen/puhdistusalue"
+    },
+    "release_url": "https://pypi.org/project/puhdistusalue/2022.7.24/",
+    "requires_dist": [
+      "puristaa (>=2022.7.24)",
+      "black ; extra == 'dev'",
+      "coverage ; extra == 'dev'",
+      "flake8 ; extra == 'dev'",
+      "mypy ; extra == 'dev'",
+      "pytest ; extra == 'dev'",
+      "pytest-cov ; extra == 'dev'",
+      "pytest-flake8 ; extra == 'dev'"
+    ],
+    "requires_python": ">=3.8",
+    "summary": "Puhdistusalue (Finnish for clean area here meaning purge range) - Purge monotonically named files in folders keeping range endpoints.",
+    "version": "2022.7.24",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "last_serial": 14532765,
+  "releases": {
+    "2021.10.24": [
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "e127b4501194557952307d8575874d037a8a4f173ab54e79ccf35da29485a738",
+          "md5": "5d9940b070390aee3906052f8eb66bf7",
+          "sha256": "7b9f6d5f6ca3fdcaa46c9b42371a97a6a7caed0c752e0ed93755e760ffda29ea"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2021.10.24-py2.py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "5d9940b070390aee3906052f8eb66bf7",
+        "packagetype": "bdist_wheel",
+        "python_version": "py2.py3",
+        "requires_python": ">=3.8",
+        "size": 7949,
+        "upload_time": "2021-10-24T18:14:13",
+        "upload_time_iso_8601": "2021-10-24T18:14:13.639875Z",
+        "url": "https://files.pythonhosted.org/packages/e1/27/b4501194557952307d8575874d037a8a4f173ab54e79ccf35da29485a738/puhdistusalue-2021.10.24-py2.py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "9980cfbf169ad360da54eda3ca01f2596036878bd7f3d41a6da034c3f030d62f",
+          "md5": "b8fbd3eabeab4774bddff86b9a47aab7",
+          "sha256": "963f3c2aa4e0f39bdecbfbe2b3828bf810631308d4c92de5a4f1a48e28dfc1e5"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2021.10.24.tar.gz",
+        "has_sig": false,
+        "md5_digest": "b8fbd3eabeab4774bddff86b9a47aab7",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.8",
+        "size": 7639,
+        "upload_time": "2021-10-24T18:14:14",
+        "upload_time_iso_8601": "2021-10-24T18:14:14.872710Z",
+        "url": "https://files.pythonhosted.org/packages/99/80/cfbf169ad360da54eda3ca01f2596036878bd7f3d41a6da034c3f030d62f/puhdistusalue-2021.10.24.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "2021.12.16": [
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "36a2341007828802fbf20f37c784478aa83d074b9ea8c3d029b0a51b39a31db2",
+          "md5": "eeb61ad5033ca35e37b9d2c45d683d63",
+          "sha256": "ca4bb716a955b43afd495f93dbe21e417542d7686343742c5aed9edcf6c9e3e6"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2021.12.16-py2.py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "eeb61ad5033ca35e37b9d2c45d683d63",
+        "packagetype": "bdist_wheel",
+        "python_version": "py2.py3",
+        "requires_python": ">=3.8",
+        "size": 7955,
+        "upload_time": "2021-12-16T11:28:47",
+        "upload_time_iso_8601": "2021-12-16T11:28:47.310976Z",
+        "url": "https://files.pythonhosted.org/packages/36/a2/341007828802fbf20f37c784478aa83d074b9ea8c3d029b0a51b39a31db2/puhdistusalue-2021.12.16-py2.py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "f1903480afe2825822ba91e4a3883b08100668841a7ad5a970aedfc25519df9f",
+          "md5": "3dc9c8eab025d907a5977272d5d6fb7a",
+          "sha256": "6787c313d33b9e62b0c11c7b56801ed6e7b0a8d3b04cba436c8203412cba18fe"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2021.12.16.tar.gz",
+        "has_sig": false,
+        "md5_digest": "3dc9c8eab025d907a5977272d5d6fb7a",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.8",
+        "size": 7031,
+        "upload_time": "2021-12-16T11:28:48",
+        "upload_time_iso_8601": "2021-12-16T11:28:48.532886Z",
+        "url": "https://files.pythonhosted.org/packages/f1/90/3480afe2825822ba91e4a3883b08100668841a7ad5a970aedfc25519df9f/puhdistusalue-2021.12.16.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "2022.6.27": [
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "766fa636170807b151b97f1eec7c36c8fcacb3d0c82104875e5f35c700001500",
+          "md5": "389a304bcf38d6f7b6282427ac84b6f1",
+          "sha256": "ad1fb150d8587e4535ce3cb3cc8c81c699988e75f2b20f7513ea0984089be22c"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2022.6.27-py2.py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "389a304bcf38d6f7b6282427ac84b6f1",
+        "packagetype": "bdist_wheel",
+        "python_version": "py2.py3",
+        "requires_python": ">=3.8",
+        "size": 7952,
+        "upload_time": "2022-06-27T19:33:35",
+        "upload_time_iso_8601": "2022-06-27T19:33:35.371139Z",
+        "url": "https://files.pythonhosted.org/packages/76/6f/a636170807b151b97f1eec7c36c8fcacb3d0c82104875e5f35c700001500/puhdistusalue-2022.6.27-py2.py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "f3cf25c956096ffaf5c280e5f20d0baedb182178caa298f6350ad84aa217c741",
+          "md5": "4f8f1f74b5a0b8d257e401e403eb4306",
+          "sha256": "8df27de1ed88112a415dbf6bdd0c55e6ff12dc070ebdefd77550bd5792415f05"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2022.6.27.tar.gz",
+        "has_sig": false,
+        "md5_digest": "4f8f1f74b5a0b8d257e401e403eb4306",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.8",
+        "size": 13498,
+        "upload_time": "2022-06-27T19:33:37",
+        "upload_time_iso_8601": "2022-06-27T19:33:37.292894Z",
+        "url": "https://files.pythonhosted.org/packages/f3/cf/25c956096ffaf5c280e5f20d0baedb182178caa298f6350ad84aa217c741/puhdistusalue-2022.6.27.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "2022.6.28": [
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "c92b467473768f3966a262625a5ad7376b18b58d4b01adfc128e1b683155dd9e",
+          "md5": "664ed63ec69ece5fc6d12e9c3be83b09",
+          "sha256": "c7727b0937dc195bf0a658b576d9084cfbcd1cd89d2bde8cd2054b9ebe465e65"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2022.6.28-py2.py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "664ed63ec69ece5fc6d12e9c3be83b09",
+        "packagetype": "bdist_wheel",
+        "python_version": "py2.py3",
+        "requires_python": ">=3.8",
+        "size": 7935,
+        "upload_time": "2022-06-27T19:45:25",
+        "upload_time_iso_8601": "2022-06-27T19:45:25.408517Z",
+        "url": "https://files.pythonhosted.org/packages/c9/2b/467473768f3966a262625a5ad7376b18b58d4b01adfc128e1b683155dd9e/puhdistusalue-2022.6.28-py2.py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "0b6892a3b9c911cd9739df1324335385a3c047518e83b866bb23871e6e96268d",
+          "md5": "07d269d01fea7a47f58a3958541711df",
+          "sha256": "eb3fef440c5d6facdd43a612191d3d31053621fc4d7b284eaa8a10d3b4c42fc9"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2022.6.28.tar.gz",
+        "has_sig": false,
+        "md5_digest": "07d269d01fea7a47f58a3958541711df",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.8",
+        "size": 13511,
+        "upload_time": "2022-06-27T19:45:27",
+        "upload_time_iso_8601": "2022-06-27T19:45:27.392891Z",
+        "url": "https://files.pythonhosted.org/packages/0b/68/92a3b9c911cd9739df1324335385a3c047518e83b866bb23871e6e96268d/puhdistusalue-2022.6.28.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "2022.6.29": [
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "226811b6eb82e70d8b8d61fc496a7f66c8e61bc2ff469ca391ea5d0a10722184",
+          "md5": "5e6bf935c9a2fac24ea30f8c9003204c",
+          "sha256": "c8e8fff3ecba29872fafe7723f993cdb206d4fb833b18fb9f1d1ee03b67d0cca"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2022.6.29-py2.py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "5e6bf935c9a2fac24ea30f8c9003204c",
+        "packagetype": "bdist_wheel",
+        "python_version": "py2.py3",
+        "requires_python": ">=3.8",
+        "size": 8290,
+        "upload_time": "2022-06-28T16:18:36",
+        "upload_time_iso_8601": "2022-06-28T16:18:36.742991Z",
+        "url": "https://files.pythonhosted.org/packages/22/68/11b6eb82e70d8b8d61fc496a7f66c8e61bc2ff469ca391ea5d0a10722184/puhdistusalue-2022.6.29-py2.py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "4ddf8ed872b7d121898ac5163c2a6a285b4154d1aae5822cb21c7d588c978604",
+          "md5": "e96246a9b6a3277e8495a175fe7279c7",
+          "sha256": "8e966f2306f19373af7037ebf35b117827470455b139cafe4defc855ef1e60b4"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2022.6.29.tar.gz",
+        "has_sig": false,
+        "md5_digest": "e96246a9b6a3277e8495a175fe7279c7",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.8",
+        "size": 14063,
+        "upload_time": "2022-06-28T16:18:38",
+        "upload_time_iso_8601": "2022-06-28T16:18:38.352594Z",
+        "url": "https://files.pythonhosted.org/packages/4d/df/8ed872b7d121898ac5163c2a6a285b4154d1aae5822cb21c7d588c978604/puhdistusalue-2022.6.29.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "2022.7.24": [
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "01383e6c9294877d18de894f5c823ab7b89d2bd6843da79232f3df57a82e8ebf",
+          "md5": "73da27355853f57d124a85249bc0e417",
+          "sha256": "406d22a2e91956049e06e65ec99b06cad4f573db397226ef6fe37e504d8586eb"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2022.7.24-py2.py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "73da27355853f57d124a85249bc0e417",
+        "packagetype": "bdist_wheel",
+        "python_version": "py2.py3",
+        "requires_python": ">=3.8",
+        "size": 8348,
+        "upload_time": "2022-07-24T15:08:34",
+        "upload_time_iso_8601": "2022-07-24T15:08:34.581546Z",
+        "url": "https://files.pythonhosted.org/packages/01/38/3e6c9294877d18de894f5c823ab7b89d2bd6843da79232f3df57a82e8ebf/puhdistusalue-2022.7.24-py2.py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": "",
+        "digests": {
+          "blake2b_256": "a9c28b138a295aa12f0512e0fc68d6e74f93cffb05e0d093558b1f1f7aa51304",
+          "md5": "ce9277d4f69928afabc890c2177bd1ee",
+          "sha256": "bd41b2b5387517ab02c06a00d397f3942ad878f3e2de8f692d37bec4d5447dfe"
+        },
+        "downloads": -1,
+        "filename": "puhdistusalue-2022.7.24.tar.gz",
+        "has_sig": false,
+        "md5_digest": "ce9277d4f69928afabc890c2177bd1ee",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.8",
+        "size": 14395,
+        "upload_time": "2022-07-24T15:08:36",
+        "upload_time_iso_8601": "2022-07-24T15:08:36.148358Z",
+        "url": "https://files.pythonhosted.org/packages/a9/c2/8b138a295aa12f0512e0fc68d6e74f93cffb05e0d093558b1f1f7aa51304/puhdistusalue-2022.7.24.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ]
+  },
+  "urls": [
+    {
+      "comment_text": "",
+      "digests": {
+        "blake2b_256": "01383e6c9294877d18de894f5c823ab7b89d2bd6843da79232f3df57a82e8ebf",
+        "md5": "73da27355853f57d124a85249bc0e417",
+        "sha256": "406d22a2e91956049e06e65ec99b06cad4f573db397226ef6fe37e504d8586eb"
+      },
+      "downloads": -1,
+      "filename": "puhdistusalue-2022.7.24-py2.py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "73da27355853f57d124a85249bc0e417",
+      "packagetype": "bdist_wheel",
+      "python_version": "py2.py3",
+      "requires_python": ">=3.8",
+      "size": 8348,
+      "upload_time": "2022-07-24T15:08:34",
+      "upload_time_iso_8601": "2022-07-24T15:08:34.581546Z",
+      "url": "https://files.pythonhosted.org/packages/01/38/3e6c9294877d18de894f5c823ab7b89d2bd6843da79232f3df57a82e8ebf/puhdistusalue-2022.7.24-py2.py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": "",
+      "digests": {
+        "blake2b_256": "a9c28b138a295aa12f0512e0fc68d6e74f93cffb05e0d093558b1f1f7aa51304",
+        "md5": "ce9277d4f69928afabc890c2177bd1ee",
+        "sha256": "bd41b2b5387517ab02c06a00d397f3942ad878f3e2de8f692d37bec4d5447dfe"
+      },
+      "downloads": -1,
+      "filename": "puhdistusalue-2022.7.24.tar.gz",
+      "has_sig": false,
+      "md5_digest": "ce9277d4f69928afabc890c2177bd1ee",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.8",
+      "size": 14395,
+      "upload_time": "2022-07-24T15:08:36",
+      "upload_time_iso_8601": "2022-07-24T15:08:36.148358Z",
+      "url": "https://files.pythonhosted.org/packages/a9/c2/8b138a295aa12f0512e0fc68d6e74f93cffb05e0d093558b1f1f7aa51304/puhdistusalue-2022.7.24.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "vulnerabilities": []
+}

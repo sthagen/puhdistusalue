@@ -1,0 +1,18 @@
+{
+  "puhdistusalue": {
+    "version": "7.3.2",
+    "timestamp": "2023-12-02T15:31:32.449056",
+    "branch_coverage": true,
+    "show_contexts": true,
+    "covered_lines": 79,
+    "num_statements": 102,
+    "percent_covered": 75,
+    "percent_covered_display": "75.00",
+    "missing_lines": 23,
+    "excluded_lines": 0,
+    "num_branches": 54,
+    "num_partial_branches": 4,
+    "covered_branches": 38,
+    "missing_branches": 16
+  }
+}

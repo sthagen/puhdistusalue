@@ -1,7 +1,7 @@
 {
   "puhdistusalue": {
-    "version": "7.3.2",
-    "timestamp": "2023-12-02T15:31:32.449056",
+    "coverage_tool_version": "7.3.2",
+    "timestamp": "2023-12-02 16:28:45 +00:00",
     "branch_coverage": true,
     "show_contexts": true,
     "covered_lines": 79,
@@ -13,6 +13,22 @@
     "num_branches": 54,
     "num_partial_branches": 4,
     "covered_branches": 38,
-    "missing_branches": 16
+    "missing_branches": 16,
+    "node_id": "c79891e5-aabf-3a83-95b9-588edcd8327f",
+    "nfiles": 3,
+    "files": [
+      "puhdistusalue/__init__.py",
+      "puhdistusalue/cli.py",
+      "puhdistusalue/puhdistusalue.py"
+    ],
+    "blake3": "192d72c43a5730263f87634fa851294a7d929ef39ac83f061703859759d2a7e1",
+    "blake2": "7ca78990f76c2a7191a1e6edee12bcbd42495de8f09752c2e641dda0a27fa1c7efeba5af983497b6f699951ec789b4b8a1f54758d94659e786ca30000a4e9bd0",
+    "sha512": "f01754039c9b12869c7707e942d0fbbf80fd97171cb1dcebc3f2739b6b9f77f42ef5f5042a5f320fcfef33e83f965853156fb820f5247a3ab0fd2c3cadfd07c5",
+    "sha384": "a543f5c69a7e10990a4dc51dbf46f3245c4d039bee47d9281069e338326ff71839080e8dd74f36751014f6607cdcd07c",
+    "sha256": "b7dcf2bf877a923fedda56afc971bcc7b7163aa28c629424c75326628f044d91",
+    "sha1": "c2226a2483b7f5c7cec7dc339d9c7bd090fb1732",
+    "md5": "322bf62435df77e630e4b92e7283e0fb",
+    "python_version": "3.10.12",
+    "entropy": 4.787792
   }
 }

@@ -1,4 +1,5 @@
 """Puhdistusalue (Finnish for clean area here meaning purge range)."""
+
 # [[[fill git_describe()]]]
 __version__ = '2022.12.13+parent.ff7049ef'
 # [[[end]]] (checksum: 853a9f21e62834d23aa0601ad62a61ce)

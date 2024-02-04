@@ -47,7 +47,7 @@ def humanize_duration(duration_seconds: float):
 @typing.no_type_check
 def main(argv=None):
     """Process the files separately per folder."""
-    start_time = dti.datetime.utcnow()
+    start_time = dti.datetime.now(dti.UTC)
     argv = sys.argv[1:] if argv is None else argv
     verbose = bool('-v' in argv or '--verbose' in argv)
     human = bool('-H' in argv or '--human' in argv)
@@ -85,7 +85,7 @@ def main(argv=None):
     else:
         folders_disp = f'{folder_paths}' if folder_paths else '[<EMPTY>]'
 
-    duration_seconds = (dti.datetime.utcnow() - start_time).total_seconds()
+    duration_seconds = (dti.datetime.now(dti.UTC) - start_time).total_seconds()
     if human:
         m_quantity, m_unit = humanize_mass(total_less_bytes)
         d_quantity, d_unit = humanize_duration(duration_seconds)

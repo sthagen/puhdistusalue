@@ -21,6 +21,7 @@
       "last_month": -1,
       "last_week": -1
     },
+    "dynamic": null,
     "home_page": "https://git.sr.ht/~sthagen/puhdistusalue",
     "keywords": "compression,developer-tools,file-processing",
     "license": "",
@@ -36,6 +37,7 @@
       "Homepage": "https://git.sr.ht/~sthagen/puhdistusalue",
       "Source Code": "https://git.sr.ht/~sthagen/puhdistusalue"
     },
+    "provides_extra": null,
     "release_url": "https://pypi.org/project/puhdistusalue/2022.7.24/",
     "requires_dist": [
       "puristaa (>=2022.7.24)",

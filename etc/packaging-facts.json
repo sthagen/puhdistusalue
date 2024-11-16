@@ -25,6 +25,8 @@
     "home_page": "https://git.sr.ht/~sthagen/puhdistusalue",
     "keywords": "compression,developer-tools,file-processing",
     "license": "",
+    "license_expression": null,
+    "license_files": null,
     "maintainer": "Stefan Hagen",
     "maintainer_email": "stefan@hagen.link",
     "name": "puhdistusalue",

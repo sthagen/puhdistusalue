@@ -12,7 +12,7 @@ def test_main_nok_empty():
 
 
 def test_main_nok_int():
-    message = r"argument of type 'int' is not iterable"
+    message = r"argument of type 'int' is not.*iterable"
     with pytest.raises(TypeError, match=message):
         cli.main(42)
 
